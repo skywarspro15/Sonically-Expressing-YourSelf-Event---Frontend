@@ -33,12 +33,24 @@ body {
   flex-direction: column;
   gap: 10px;
   width: 80%;
+  animation: enterIn 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .poll button.poll-option {
   font-size: 20px;
   padding: 10px;
   width: 100%;
+}
+
+@keyframes enterIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media only screen and (min-width: 768px) {

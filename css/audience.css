@@ -1,0 +1,51 @@
+:root {
+  --lightshow-color: #381a58;
+}
+
+html,
+body {
+  background-color: var(--lightshow-color);
+}
+
+.lightshow-view {
+  width: 100%;
+  height: 100%;
+  background-color: var(--lightshow-color);
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.presentation-interaction {
+  width: 99%;
+  height: 98%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.poll {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+}
+
+.poll button.poll-option {
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .poll {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 45%;
+  }
+}

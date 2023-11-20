@@ -15,6 +15,9 @@ function createPoll(data) {
     let pollChoice = document.createElement("button");
     pollChoice.innerText = choice;
     pollChoice.className = "poll-option";
+    pollChoice.addEventListener("click", () => {
+      socket.emit("answer", choice);
+    });
     pollContainer.appendChild(pollChoice);
   });
 
@@ -22,8 +25,17 @@ function createPoll(data) {
   presInteraction.appendChild(pollContainer);
 }
 
-socket.on("hello", (arg) => {
-  console.log("hello, " + arg);
+function replaceText(data) {
+  presInteraction.innerHTML = "";
+
+  let presentationText = document.createElement("h1");
+  presentationText.className = "presentation-text";
+  presentationText.innerText = data;
+  presInteraction.appendChild(presentationText);
+}
+
+socket.on("text", (data) => {
+  replaceText(data);
 });
 
 socket.on("poll", (data) => {

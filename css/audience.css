@@ -28,6 +28,10 @@ body {
   text-align: center;
 }
 
+.presentation-text {
+  animation: enterIn 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
 .poll {
   display: flex;
   flex-direction: column;

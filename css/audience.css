@@ -19,7 +19,7 @@ body {
 
 .presentation-interaction {
   width: 99%;
-  height: 98%;
+  height: 95%;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -30,6 +30,7 @@ body {
 
 .presentation-text {
   animation: enterIn 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  width: 85%;
 }
 
 .poll {
@@ -44,6 +45,37 @@ body {
   font-size: 20px;
   padding: 10px;
   width: 100%;
+}
+
+.now-playing {
+  position: absolute;
+  width: 90%;
+  max-height: 10%;
+  bottom: 0;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #26143a;
+  border-radius: 5px;
+}
+
+.now-playing .albumCover {
+  min-width: 35px;
+  min-height: 35px;
+  border-radius: 3px;
+  background: url("https://archive.org/download/mbid-508e835d-1d12-4118-b583-5f66e39ed32e/mbid-508e835d-1d12-4118-b583-5f66e39ed32e-29019546169_thumb500.jpg");
+  background-size: contain;
+}
+
+.now-playing p.songName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%;
 }
 
 @keyframes enterIn {

@@ -1,5 +1,3 @@
-@import url("satoshi.css");
-
 html,
 body {
   font-family: "Satoshi", BlinkMacSystemFont, -apple-system, "Segoe UI",
@@ -9,10 +7,17 @@ body {
   color: white;
   width: 99.5%;
   height: 98%;
+  box-sizing: border-box;
 }
 
 * {
   font-family: inherit;
+}
+*,
+*:before,
+*:after {
+  font-family: inherit;
+  box-sizing: inherit;
 }
 
 button {
